@@ -28,7 +28,7 @@ SECRET_KEY = config('SECRET_KEY', default='unsafe-secret-key-change-me')
 DEBUG = config('DEBUG', default=True, cast=bool)
 
 
-ALLOWED_HOSTS = ['.railway.app', '127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['notenukkad-production.up.railway.app', '127.0.0.1', 'localhost']
 
 
 
