@@ -62,6 +62,7 @@ MIDDLEWARE = [
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
 ]
 
 ROOT_URLCONF = 'notenukkad.urls'
@@ -157,7 +158,8 @@ AUTH_USER_MODEL = 'users.User'
 
 
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:5173",   # Vite dev server
+    "http://localhost:5173",
+    "https://notenukkad-production.up.railway.app",  # allow backend domain
 ]
 
 
@@ -186,3 +188,4 @@ CACHES = {
     }
 }
 
+CORS_ALLOW_CREDENTIALS = True
